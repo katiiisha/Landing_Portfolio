@@ -1,0 +1,45 @@
+:root {
+    --Base:  #000000;
+    --Level-1: #181823;
+    --Light-grey: #DEECF9;
+    --Dark-Grey: #C7E0F4;
+    --Text: #FFFFFF;
+    --Primary: #5221E6;
+    --Green-Accent: #3CC74E;
+    --Pink-Accent: #E95D90;
+    --Peach-Accent: #FFF3E4;
+    --Violet-Accent: #FBE4FF;
+}
+body {
+    font-family: 'Sen', sans-serif;
+    background: #000;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4.5rem 0;
+}
+.menu__list {
+    display: flex;
+    list-style-type: none;
+}
+.menu__item {
+    display: flex;
+    padding: 2rem 1.5rem;
+}
+.menu__item_active {
+    transition: 0.3s linear;
+}
+.menu__item_active:hover {
+    background: var( --Primary);
+    transition: 0.3s linear;
+}
+.menu__link {
+    text-decoration: none;
+    color: var(--Text);
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5; 
+}
