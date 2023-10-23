@@ -12,13 +12,23 @@
 }
 body {
     font-family: 'Sen', sans-serif;
-    background: #000;
+    margin: 0;
+    overflow-y: hidden;
 }
-.header {
+header {
+    background-image: linear-gradient(to right,var(--Base) 40%, var(--Level-1) 30%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+
+}
+.nav-bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 4.5rem 0;
+    max-width: 1300px;
+    margin: auto;
 }
 .menu__list {
     display: flex;
@@ -42,4 +52,50 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 1.5; 
+}
+.header-section {
+    display: flex;
+    align-items: center;  
+    justify-content: center;
+    /* padding: 5rem 2.5rem 5.25rem 0;   */
+    padding-bottom: 5.25rem;
+}
+.header-section__img {
+    position: relative;
+    background-image: url(image/photographer.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 750px;
+height: 650px;
+}
+
+.header-section__title {
+    position: relative;
+    right: 87px;
+    width: 46.125rem;
+}
+.header-section__heading {
+    width: clamp(320px, 55vw, 738px);
+    color: var(--Text);
+    font-size: clamp(32px, 7.3vw, 78px);
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.header-section_span {
+    color: rgba(255, 255, 255, 0.50);
+}
+.header-section__text {
+    color: var(--Text);
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+@media (max-width: 768px) {
+    header {
+        background-image: linear-gradient(to right,var(--Base) 40%, var(--Base) 30%);
+    }
+    .header-section__img {
+        /* width: 384px;
+        height: 650px; */
+        background: url(image/photographer_media.png    );
+    }
 }
