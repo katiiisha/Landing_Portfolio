@@ -99,7 +99,7 @@ header {
     max-width: 1400px;
     margin: auto;
 }
-.page__title {
+.page__title{
     /* max-width: 690px; */
     width: clamp(320px, 80vw, 690px);
     margin: 0;
@@ -242,6 +242,107 @@ header {
 .container_xl .container__title{
     margin-bottom: 12px;
 }
+.page_pad-none {
+    padding-top: 0;
+}
+.page-swipper {
+    background-color: var(--Base);
+    
+}
+.swipper-container{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding-right: 72px;
+}
+.swipper-container__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    border: 1px solid var(--Level-1);
+}
+.wrapper-project {
+    max-width: 1500px;
+    margin: auto;
+    padding-bottom: 193px;
+}
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    list-style-type: none;
+    padding: 0;
+    padding-right: 72px;
+}
+.project-list__header {
+    margin-bottom: 80px;
+}
+.project-list__text-upper {
+    margin: 0;
+    color: var(--Light-grey);
+    font-size: 16px;
+    text-transform: uppercase;
+    line-height: 1.5;
+    font-weight: 400;
+}
+.project-list__title {
+     /* width: clamp(320px, 80vw, 690px); */
+    max-width: 572px;  
+    margin: 0;
+    color: var(--Text);
+    font-size: 55px;
+    font-weight: 700;
+}
+.project-list__card {
+    background-color: var(--Level-1);
+    margin-bottom: 24px;
+}
+.project-list__card-link {
+    text-decoration: none;
+}
+.project-list__card-img{
+    width: 100%;
+}
+.project-list__card-title {
+     margin-top: 0;
+    color: var(--Text);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 13px;
+}
+.project-list__card-text {
+     margin: 0;
+    color: var(--Light-grey);
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+.project-list__card-footer {
+    padding: 40px 32px;
+    /* width: 572px; */
+}
+.project-list__wrapper-bth {
+    display: flex;
+    justify-content: center;  
+    margin-top: 91px;  
+}
+.project-list__btn {
+    /* box-sizing: border-box; */
+    width: 247px;
+    height: 75px;
+    padding: 24px 27px;
+    text-align: center;
+    background-color: var(--Base);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 27px */
+    text-transform: uppercase;
+    color: var(--Text);
+    border: 1px solid var(--Primary);
+    cursor: pointer;    
+}
 
 
 
@@ -270,5 +371,13 @@ header {
     .container_xl {
         margin-bottom: 80px;
     }
+    .swipper-container {
+        padding-right: 0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .project-list {
+        padding-right: 0px;
+    } 
 }
  
