@@ -200,10 +200,16 @@ header {
     font-weight: 400;
     line-height: 1.5; 
     text-decoration: none;
+    transition: 0.2s linear;
+    
+}
+.page-header__link_hover {
+    padding-bottom: 2px;
+    border-bottom: 1px solid var(--Light-grey);
 }
 .page-header__link_hover:hover {
-    padding-bottom: 2px;
-        border-bottom: 1px solid var(--Light-grey);
+    transition: 0.2s linear;
+    border-bottom: 2px solid var(--Light-grey);
     
 }
 .page-img {
@@ -300,6 +306,9 @@ header {
 .project-list__card-link {
     text-decoration: none;
 }
+.project-list__card-wrapper {
+    margin: 0;
+}
 .project-list__card-img{
     width: 100%;
 }
@@ -343,7 +352,87 @@ header {
     border: 1px solid var(--Primary);
     cursor: pointer;    
 }
-
+.page-light_violet {
+    background-color: var(--Violet-Accent);
+}
+.page-light_violet .page-img {
+    background-image: url(image/violet.png);
+}
+.page-dribbble {
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: auto;
+}
+.page-header__title_white, .page-header__text_white, .page-header__link_white {
+    color: var(--Text);
+}
+.page-header_white {
+    margin: 0;
+}
+.page-header__text_white {
+    margin-bottom: 40px;
+}
+.page-header__link_hover-white{
+    transition: 0.2s linear;
+    border-bottom: 1px solid var(--Text);
+}
+.page-header__link_hover-white:hover {
+    transition: 0.2s linear;
+    border-bottom: 2px solid var(--Text);
+} 
+.dribbble-img {
+    display: flex;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    margin-right: 72px;
+}
+.dribbble-img__item {
+    width: 100%;
+}
+.project-list__text {
+    color: var(--Light-grey);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    max-width: 588px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+.project-list__wrapper-link{
+   
+    transition: 0.2s linear;
+    border-bottom: 1px solid var(--Text);
+}
+.project-list__wrapper-link:hover {
+    transition: 0.2s linear;
+    border-bottom: 2px solid var(--Text);
+}
+.project-list__link {
+    color: var(--Text);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5; 
+    text-decoration: none;
+}
+.project-list__card_dark {
+    margin-bottom: 120px;
+    background-color: var(--Base);
+}
+.project-list__card-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.project-list__card-footer_borber {
+    display: flex;
+    flex-direction: column;
+    height: 302px;
+    padding: 64px;
+    margin: 0;
+    border: 1px solid var(--Dark-Grey);
+    gap: 64px;
+}
 
 
 @media (max-width: 1300px) {
