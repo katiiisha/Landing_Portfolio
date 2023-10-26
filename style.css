@@ -184,7 +184,7 @@ header {
 
 }
 .page-header__text {
-    color: var(--Dark-grey);
+    color: var(--Dark-Grey);
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -365,13 +365,13 @@ header {
     justify-content: flex-start;
     margin: auto;
 }
-.page-header__title_white, .page-header__text_white, .page-header__link_white {
+.page-header__title_white, .page-header__link_white {
     color: var(--Text);
 }
 .page-header_white {
     margin: 0;
 }
-.page-header__text_white {
+.page-header__text_margin {
     margin-bottom: 40px;
 }
 .page-header__link_hover-white{
@@ -390,6 +390,12 @@ header {
 }
 .dribbble-img__item {
     width: 100%;
+}
+.wrapper-project_none-pad {
+    padding-bottom: 0;
+}
+.project-list {
+    margin: 0;
 }
 .project-list__text {
     color: var(--Light-grey);
@@ -427,11 +433,64 @@ header {
 .project-list__card-footer_borber {
     display: flex;
     flex-direction: column;
-    height: 302px;
-    padding: 64px;
+    height: 70%;
+    padding: clamp(32px, 4vw,64px ) ;
     margin: 0;
     border: 1px solid var(--Dark-Grey);
     gap: 64px;
+}
+.photography {
+    max-width: 1500px;
+    margin: auto;
+}
+.tabs {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 120px;
+}
+.tabs__menu {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+.tabs__link {
+    padding: 12px 16px;
+    border: 1px solid var(--Primary);
+    background-color: var(--Base);
+    color: var(--Text);
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+    cursor: pointer;
+    text-decoration: none;
+
+}
+.tabs__link_active {
+    background-color: var(--Primary);
+}
+
+.tabs__wrapper{
+    display: none;
+}
+.tabs__wrapper:target {
+    display: block;
+}
+.tabs__item {
+    padding-right: 24px;
+    padding-bottom: 24px;
+}
+#content-1:target~.tabs__menu>[href="#content-1"],
+#content-2:target~.tabs__menu>[href="#content-2"],
+#content-3:target~.tabs__menu>[href="#content-3"],
+#content-4:target~.tabs__menu>[href="#content-4"] {
+  background-color: var(--Primary);
+}
+
+#content-2:target~.tabs__menu>.tabs__link_active,
+#content-3:target~.tabs__menu>.tabs__link_active,
+#content-4:target~.tabs__menu>.tabs__link_active {
+    background-color: var(--Base);
 }
 
 
