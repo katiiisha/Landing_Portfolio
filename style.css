@@ -443,10 +443,12 @@ header {
     max-width: 1500px;
     margin: auto;
 }
+.page-header__text_margin {
+    margin-bottom: 40px;
+}
 .tabs {
     display: flex;
     flex-direction: column-reverse;
-    padding-bottom: 120px;
 }
 .tabs__menu {
     display: flex;
@@ -473,6 +475,9 @@ header {
 .tabs__wrapper{
     display: none;
 }
+.tabs__item_active:active {
+    display: block;
+}
 .tabs__wrapper:target {
     display: block;
 }
@@ -486,12 +491,74 @@ header {
 #content-4:target~.tabs__menu>[href="#content-4"] {
   background-color: var(--Primary);
 }
-
-#content-2:target~.tabs__menu>.tabs__link_active,
-#content-3:target~.tabs__menu>.tabs__link_active,
-#content-4:target~.tabs__menu>.tabs__link_active {
-    background-color: var(--Base);
+.feedback {
+    padding-bottom: 120px;
+    display: flex;
+    max-width: 1500px;
+    margin: auto;
+    padding-right: 72px;
+    justify-content: space-between;
 }
+
+.page-header__title_feedback {
+    flex-shrink: 2;
+    min-width: 390px;
+}
+
+.submission-form {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;
+}
+.submission-form__wrapper {
+    display: flex;
+    flex-direction: column;
+    width: clamp(320px, 40vw, 526px);
+    gap: 40px;
+} 
+.submission-form__item {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: var(--Text);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+}
+.submission-form__input {
+    height: 50px;
+}
+.submission-form__textarea {
+    height: 100px;
+    resize: none;
+}
+.submission-form__textarea, .submission-form__input {
+    background: var(--Level-1);
+    border: none;
+    color: var(--Text);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.submission-form__btn {
+    height: 50px;
+    width: 100%;
+    background: var(--Primary);
+    border: none;
+    color: var(--White, #FFF);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5; 
+    text-transform: uppercase;
+    cursor: pointer;
+    height: 75px;
+    /* padding: 24px 32px; */
+}
+
+
+
+
 
 
 @media (max-width: 1300px) {
@@ -524,8 +591,12 @@ header {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
     }
-    .project-list {
+    .project-list, .feedback {
         padding-right: 0px;
     } 
+    .page-header_white_feedback {
+        margin: 0;
+    }
+    
 }
  

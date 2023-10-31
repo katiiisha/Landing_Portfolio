@@ -384,43 +384,43 @@
         </section>
         <section class="page">
             <div class="photography">
-                           <div class="page-header page-header_white">
+                <div class="page-header page-header_white">
                     <h2 class="page-header__title page-header__title_white">
                         Photography
                     </h2>
-                    <p class="page-header__text ">
+                    <p class="page-header__text page-header__text_margin">
                     Here is a collection of my best travel pictures that I took while travelling places all around the world. 
                     </p>
                 </div> 
                 <div class="tabs">
 
-                    <div class="tabs__wrapper " id="content-1">
-                        <img class="tabs__item" src="image/italy1.png" alt="Итальянский дворик">
-                        <img class="tabs__item" src="image/italy2.png" alt="Кафе в Италии">
-                        <img class="tabs__item" src="image/italy3.png" alt="Канал в Италии">
-                        <img class="tabs__item" src="image/italy4.png" alt="Вид на город в Италии">
-                    </div>
-                     <div class="tabs__wrapper" id="content-2">
-                        <img class="tabs__item" src="image/italy1.png" alt="Итальянский дворик">
-                        <img class="tabs__item" src="image/italy2.png" alt="Кафе в Италии">
-                        <img class="tabs__item" src="image/italy3.png" alt="Канал в Италии">
-                        
-                    </div>
-                     <div class="tabs__wrapper" id="content-3">
-                        <img class="tabs__item" src="image/italy1.png" alt="Итальянский дворик">
-                        <img class="tabs__item" src="image/italy2.png" alt="Кафе в Италии">
-                        
-                    </div>
-                     <div class="tabs__wrapper" id="content-4">
-                        <img class="tabs__item" src="image/italy1.png" alt="Итальянский дворик">
+                    <div class="tabs__wrapper tabs__item_active " id="content-1">
+                        <img class="tabs__item " src="image/italy1.png" alt="Итальянский дворик">
                         <img class="tabs__item" src="image/italy2.png" alt="Кафе в Италии">
                         <img class="tabs__item" src="image/italy3.png" alt="Канал в Италии">
                         <img class="tabs__item" src="image/italy4.png" alt="Вид на город в Италии">
                     </div>
 
+                    <div class="tabs__wrapper" id="content-2">
+                        <img class="tabs__item" src="image/italy1.png" alt="Итальянский дворик">
+                        <img class="tabs__item" src="image/italy2.png" alt="Кафе в Италии">
+                        <img class="tabs__item" src="image/italy3.png" alt="Канал в Италии">
+                        
+                    </div>
+
+                    <div class="tabs__wrapper" id="content-3">
+                        <img class="tabs__item" src="image/italy1.png" alt="Итальянский дворик">
+                        <img class="tabs__item" src="image/italy2.png" alt="Кафе в Италии">
+                        
+                    </div>
+
+                    <div class="tabs__wrapper" id="content-4">
+                        <img class="tabs__item" src="image/italy1.png" alt="Итальянский дворик">
+                    </div>
+
                     <div class="tabs__menu">
                         
-                        <a href="#content-1" class="tabs__link tabs__link_active"> ITALY </a>
+                        <a href="#content-1" class="tabs__link "> ITALY </a>
                         <a href="#content-2" class="tabs__link"> AUSTRALIA</a>
                         <a href="#content-3" class="tabs__link">INDIA</a>
                         <a href="#content-4" class="tabs__link">BRAZIL</a>
@@ -432,6 +432,47 @@
    
                 
         </section>
+        <section class="page">
+            <div class="feedback">
+                <div class="page-header page-header_white page-header_white_feedback">
+                    <h2 class="page-header__title page-header__title_white page-header__title_feedback">
+                        Let’s get started
+                    </h2>
+                    <p class="page-header__text ">
+                    Now that you know a lot about me, let me know if you are interested to work with me.
+                    </p>
+                </div> 
+                <div class="submission-form">
+                    <form class="submission-form__wrapper" action="" >
+                        <label class="submission-form__item">
+                            Name
+                            <input class="submission-form__input" type="text" required>
+                        </label>
+                        <label class="submission-form__item">
+                            Email
+                            <input class="submission-form__input" type="email" required>
+                        </label>
+                        <label class="submission-form__item">
+                            Message
+                            <textarea class="submission-form__textarea" required></textarea>
+                        </label>
+                        <button class="submission-form__btn" type="submit">
+                            Let’s get started
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+          
+        </section>
     </main>
+    <footer>
+        
+    </footer>
+    <script>
+        if (location.hash==='' || location.hash==='#') {
+            location.hash = 'content-1';
+            }
+    </script>
 </body>
 </html>
