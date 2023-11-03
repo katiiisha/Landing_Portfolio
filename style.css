@@ -53,6 +53,94 @@ header {
     font-weight: 400;
     line-height: 1.5; 
 }
+.burger-menu{
+    display: none;  
+}
+ .menu-btn{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 21px;
+    right:21px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 2;
+    }
+    .menu-btn > span,
+    .menu-btn > span::before, 
+    .menu-btn > span::after
+    {
+    display: block;
+    position: absolute;
+    width: 100%;        
+    height: 4px;
+    background-color: black;
+    transition-duration: .25s;
+    }
+    
+    .menu-btn > span::before {
+    background-color: #C4C4C4;
+    content: '';
+    top: -7px;
+    width: 100%;
+    }
+   
+    .menu-btn > span::after {
+    background-color: #C4C4C4;
+    content: '';
+    top: 3px;
+    width: 70%;
+    left: 8px;
+    }
+    .menubox{
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: var(--Level-1);
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    transition-duration: .25s;
+    z-index: 1;
+    }
+    .menu-item {
+    display: block;
+    padding: 12px 24px;
+    color: var(--Text);
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+    }
+    .menu-item:hover {
+    background-color: var(--Primary);
+    }
+    #menu-toggle{
+    opacity: 0;
+    }
+    #menu-toggle:checked ~ .menu-btn > span{
+    transform: rotate(45deg);
+    }
+    #menu-toggle:checked ~ .menu-btn > span::before{
+    top: 0;
+    transform: rotate(0);
+    }
+    #menu-toggle:checked ~ .menu-btn > span::after{
+    top: 0;
+    transform: rotate(90deg);
+    width: 100%;
+    left: 0;
+    }
+    #menu-toggle:checked ~ .menubox{
+    visibility: visible;
+    right: 0;
+    }
 .header-section {
     display: flex;
     align-items: center;  
@@ -479,11 +567,12 @@ header {
     display: block;
 }
 .tabs__wrapper:target {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
 }
 .tabs__item {
-    padding-right: 24px;
-    padding-bottom: 24px;
+    flex: 1;
 }
 #content-1:target~.tabs__menu>[href="#content-1"],
 #content-2:target~.tabs__menu>[href="#content-2"],
@@ -498,11 +587,12 @@ header {
     margin: auto;
     padding-right: 72px;
     justify-content: space-between;
+    gap: 24px;
 }
 
 .page-header__title_feedback {
     flex-shrink: 2;
-    min-width: 390px;
+    /* min-width: 390px; */
 }
 
 .submission-form {
@@ -631,6 +721,9 @@ header {
         padding-left: 40px;
         padding-right: 40px;
     }
+    .page__title {
+        font-size: clamp(32px, 7.5vw, 55px)
+    }
     .page-header  {
            margin: auto 20px;
     }
@@ -649,11 +742,79 @@ header {
     .project-list, .feedback {
         padding-right: 0px;
     } 
+    .feedback {
+        padding-bottom: 80px;
+    }
     .page-header_white_feedback {
         margin: 0;
     }
     .footer_wrapper {
         padding:  80px 40px;
     }
+}
+@media (max-width: 670px) {
+
+    .nav-bar {
+        padding: 24px 20px;
+    }
+    .menu {
+        display: none;
+    }
+    .burger-menu{
+        display: flex;
+    }
+    .header-section {
+        flex-direction: column;
+        padding-bottom: 0;
+    }
+    .header-section__img {
+        width: 100vw;
+        height: 40vh;
+        background-position: left center;
+        background-size: cover;
+    }
+    .header-section__title {
+        box-sizing: border-box;
+        right: 0;
+        padding: 48px 20px 0 20px;
+        width: 100vw;
+    }
+    .header-section__heading {
+        width: 100%;
+    }
+    .page {
+        padding: 80px 20px 0 20px;
+    }
+   
+    .container {
+        flex-wrap: wrap;
+    }
+    .wrapper-page {
+        flex-wrap: wrap;
+        height: min-content;
+        align-content: space-between;
+    }
+    .page-header {
+        margin: 48px 20px;
+        width: 100%;
+    }
+    .page-header__text {
+        margin-bottom: 90px;
+    }
+    .page-img {
+        width: 100%;
+        height: 450px;
+    }
+    /* .page__title {
+        width: max-content;
+    } */
+    .container_xl {
+        grid-template-columns: 1fr;
+    }
+    .project-list {
+        grid-template-columns: 1fr;
+    }
+
+
 }
  
