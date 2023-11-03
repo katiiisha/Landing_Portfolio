@@ -380,11 +380,11 @@ header {
     font-weight: 400;
 }
 .project-list__title {
-     /* width: clamp(320px, 80vw, 690px); */
+    
     max-width: 572px;  
     margin: 0;
     color: var(--Text);
-    font-size: 55px;
+    font-size: clamp(32px, 7.3vw, 55px);
     font-weight: 700;
 }
 .project-list__card {
@@ -401,7 +401,7 @@ header {
     width: 100%;
 }
 .project-list__card-title {
-     margin-top: 0;
+    margin-top: 0;
     color: var(--Text);
     font-size: 24px;
     font-weight: 700;
@@ -798,6 +798,12 @@ header {
         margin: 48px 20px;
         width: 100%;
     }
+    .page__header_s {
+        width: 100%;
+    }
+    .page__title {
+        width: 100%;
+    } 
     .page-header__text {
         margin-bottom: 90px;
     }
@@ -810,11 +816,91 @@ header {
     } */
     .container_xl {
         grid-template-columns: 1fr;
+        margin-bottom: 0;
+    }
+    .wrapper-project {
+        padding-bottom: 80px;
     }
     .project-list {
         grid-template-columns: 1fr;
+        gap: 0px;
+    }
+    .project-list__card {
+        margin-bottom: 48px;
+    }
+    .project-list__wrapper-bth {
+        margin-top: 80px;
+    }
+
+    
+    .page-dribbble {
+        gap: 64px;
+    }
+    .page-header_white {
+        margin: 0;
+    }
+    .dribbble-img {
+        margin-top: 20px;
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    .dribbble-img__item {
+        height: 480px;
+    }
+    
+    .tabs__menu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-items: center;
+    }
+    .tabs__link {
+        box-sizing: border-box;
+        width: 100%;
+        text-align: center;
+    }
+    .tabs__item {
+        width: 100%;
+    }
+    .feedback {
+        flex-wrap: wrap;
+        gap: 0;
+
+    }
+    .page-header__text {
+        margin-bottom: 48px;
+    }
+    .submission-form {
+        width: 100%;
+
+    }
+    .submission-form__wrapper {
+        width: 100%;
     }
 
 
+}
+@media (max-width: 500px) {
+    .footer_wrapper {
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr 1fr;
+        gap: 48px;
+        
+    }
+    .footer-socials {
+        grid-row: 1/2;
+    }
+    .footer-socials__list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+    .footer-nav {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .footer-nav__list{
+       grid-template-columns: repeat(1, 1fr); 
+    }
 }
  
