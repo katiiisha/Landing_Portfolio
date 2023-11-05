@@ -30,6 +30,7 @@ header {
     position: fixed;
     z-index: 4;
     background: transparent;
+    padding-left: 40px;
 }
 .nav__bg__start {
   position: fixed;
@@ -51,7 +52,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    padding-right: 40px;
     max-width: 1300px;
     margin: auto;
 }
