@@ -11,23 +11,24 @@
     <title>ЬRobin W.</title>
 </head>
 <body>
-    <header>
+    <header id="home">
         <div class="nav-bar">
-            <div class="logo">
-                <a class="logo__link" href="#">
-                    <img src="/image/logo.svg" alt="Robin W">
-                </a>
-            </div>
+            <div class="nav-menu">
+                <div class="logo">
+                        <a class="logo__link" href="#home">
+                            <img src="/image/logo.svg" alt="Robin W">
+                        </a>
+                </div>
 
-            <nav class="menu">
-                <ul class="menu__list">
-                    <li class="menu__item menu__item_active"><a class="menu__link" href="#">Experience</a></li>
-                    <li class="menu__item menu__item_active"><a class="menu__link" href="#">Work</a></li>
-                    <li class="menu__item menu__item_active"><a class="menu__link" href="#">Photography</a></li>
-                    <li class="menu__item menu__item_active"><a class="menu__link" href="#">Contact</a></li>
-                </ul>
-            </nav>
-
+                <nav class="menu">
+                        <ul class="menu__list">
+                            <li class="menu__item"><a class="menu__link" href="#experience">Experience</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#list-work">Work</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#photography">Photography</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#contact">Contact</a></li>
+                        </ul>
+                </nav>
+             </div>
             <div class="burger-menu">
 
                 <input id="menu-toggle" type="checkbox" />
@@ -44,6 +45,8 @@
              </div>
 
         </div>
+        <div class="nav__bg__start"></div>
+        <div class="nav__bg"></div>
         
 
         <div class="header-section">
@@ -61,7 +64,7 @@
 
     </header>
     <main>
-        <section class="page">
+        <section class="page" id="experience">
             <div class="page__header">
                 <p class="page__text page__text_upper">work experience</p>
                 <h2 class="page__title">
@@ -103,7 +106,7 @@
 
             </div>
         </section>
-        <section class="page-light page-light_peach">
+        <section class="page-light page-light_peach" >
             <div class="wrapper-page">
                 <div class="page-header">
 
@@ -120,7 +123,7 @@
                 
             </div>
         </section>
-        <section class="page">
+        <section class="page" >
             <div class="page_wrapper">
                 <div class="page__header page__header_s">
                     <h2 class="page__title">
@@ -200,7 +203,7 @@
                 
             </div>
         </section>
-        <section class="page">
+        <section class="page" id="list-work">
             <div class="wrapper-project">
                 <ul class="project-list">
                     <li class="project-list__item">
@@ -399,7 +402,7 @@
                 </ul>
             </div>
         </section>
-        <section class="page">
+        <section class="page" id="photography">
             <div class="photography">
                 <div class="page-header page-header_white">
                     <h2 class="page-header__title page-header__title_white">
@@ -411,6 +414,7 @@
                 </div> 
                 <div class="tabs">
 
+                    <input type="radio" class="tabs__inp" id="content-1" class="" name="tab" checked>
                     <div class="tabs__wrapper tabs__item_active " id="content-1">
                         <img class="tabs__item " src="image/italy1.png" alt="Итальянский дворик">
                         <img class="tabs__item" src="image/italy2.png" alt="Кафе в Италии">
@@ -418,6 +422,7 @@
                         <img class="tabs__item" src="image/italy4.png" alt="Вид на город в Италии">
                     </div>
 
+                    <input type="radio" class="tabs__inp" id="content-2" name="tab">
                     <div class="tabs__wrapper" id="content-2">
                         <img class="tabs__item" src="image/italy1.png" alt="Итальянский дворик">
                         <img class="tabs__item" src="image/italy2.png" alt="Кафе в Италии">
@@ -425,31 +430,32 @@
                         
                     </div>
 
+                    <input type="radio" class="tabs__inp" id="content-3" name="tab">
                     <div class="tabs__wrapper" id="content-3">
                         <img class="tabs__item" src="image/italy1.png" alt="Итальянский дворик">
                         <img class="tabs__item" src="image/italy2.png" alt="Кафе в Италии">
                         
                     </div>
 
+                    <input type="radio" class="tabs__inp" id="content-4" name="tab">
                     <div class="tabs__wrapper" id="content-4">
                         <img class="tabs__item" src="image/italy1.png" alt="Итальянский дворик">
                     </div>
-
-                    <div class="tabs__menu">
-                        
-                        <a href="#content-1" class="tabs__link "> ITALY </a>
-                        <a href="#content-2" class="tabs__link"> AUSTRALIA</a>
-                        <a href="#content-3" class="tabs__link">INDIA</a>
-                        <a href="#content-4" class="tabs__link">BRAZIL</a>
-        
+                     <div class="tabs__menu">
+                        <label class="tabs__link" for="content-1">ITALY </label>
+                        <label class="tabs__link" for="content-2">AUSTRALIA</label>
+                        <label class="tabs__link" for="content-3">INDIA</label>
+                        <label class="tabs__link" for="content-4">BRAZIL</label>
                     </div>
+
+                    
 
                 </div>
             </div>
    
                 
         </section>
-        <section class="page">
+        <section class="page" id="contact">
             <div class="feedback">
                 <div class="page-header page-header_white page-header_white_feedback">
                     <h2 class="page-header__title page-header__title_white page-header__title_feedback">
@@ -521,10 +527,6 @@
             </div>
         </div>
     </footer>
-    <script>
-        if (location.hash==='' || location.hash==='#') {
-            location.hash = 'content-1';
-            }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

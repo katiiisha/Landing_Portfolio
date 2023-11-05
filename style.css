@@ -10,6 +10,9 @@
     --Peach-Accent: #FFF3E4;
     --Violet-Accent: #FBE4FF;
 }
+html, body {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Sen', sans-serif;
     margin: 0;
@@ -23,29 +26,53 @@ header {
 
 }
 .nav-bar {
+    width: 100%;
+    position: fixed;
+    z-index: 4;
+    background: transparent;
+}
+.nav__bg__start {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 72px;
+  background-color: #000000;
+  z-index: 2;
+}
+
+.nav__bg {
+  position: relative;
+  width: 100%;
+  height: 72px;
+  background-image: linear-gradient(to right,var(--Base) 40%, var(--Level-1) 30%);
+  z-index: 3;
+}
+.nav-menu {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 4.5rem 0;
+    
     max-width: 1300px;
     margin: auto;
 }
 .menu__list {
     display: flex;
     list-style-type: none;
+    margin: 0;
 }
 .menu__item {
     display: flex;
-    padding: 2rem 1.5rem;
-}
-.menu__item_active {
     transition: 0.3s linear;
 }
-.menu__item_active:hover {
-    background: var( --Primary);
+.menu__item_active {
+    background: var( --Primary);    
+}
+.menu__item:hover {
+    
     transition: 0.3s linear;
 }
 .menu__link {
+    padding: 24px 32px;
     text-decoration: none;
     color: var(--Text);
     font-size: 1rem;
@@ -60,8 +87,8 @@ header {
     display: flex;
     align-items: center;
     position: absolute;
-    top: 21px;
-    right:21px;
+    top: 22px;
+    right: 64px;
     width: 26px;
     height: 26px;
     cursor: pointer;
@@ -556,30 +583,25 @@ header {
     text-decoration: none;
 
 }
-.tabs__link_active {
+/* .tabs__link_active {
     background-color: var(--Primary);
-}
+} */
 
-.tabs__wrapper{
+.tabs__wrapper, .tabs__inp{
     display: none;
 }
-.tabs__item_active:active {
-    display: block;
-}
-.tabs__wrapper:target {
+.tabs__inp:checked + .tabs__wrapper {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
 }
-.tabs__item {
-    flex: 1;
-}
-#content-1:target~.tabs__menu>[href="#content-1"],
-#content-2:target~.tabs__menu>[href="#content-2"],
-#content-3:target~.tabs__menu>[href="#content-3"],
-#content-4:target~.tabs__menu>[href="#content-4"] {
+#content-1:checked~.tabs__menu>[for="content-1"],
+#content-2:checked~.tabs__menu>[for="content-2"],
+#content-3:checked~.tabs__menu>[for="content-3"],
+#content-4:checked~.tabs__menu>[for="content-4"] {
   background-color: var(--Primary);
 }
+
 .feedback {
     padding-bottom: 120px;
     display: flex;
@@ -715,7 +737,10 @@ header {
         background-repeat: no-repeat;
         background-position: right;
     }
-    
+    .nav__bg  {
+        background-image: none;
+    }
+   
     .page {
         padding-top: 80px;
         padding-left: 40px;
@@ -762,6 +787,9 @@ header {
     }
     .burger-menu{
         display: flex;
+    }
+    .nav__bg__start {
+        height: 68px;
     }
     .header-section {
         flex-direction: column;
@@ -861,6 +889,7 @@ header {
     }
     .tabs__item {
         width: 100%;
+        
     }
     .feedback {
         flex-wrap: wrap;
