@@ -9,9 +9,9 @@ const observer = new IntersectionObserver((entries) => {
             document.querySelectorAll('.menu__link').forEach((link) => { 
                 let id = link.getAttribute('href').replace('#', '');
                 if (id === entry.target.id) {
-                    link.classList.add('menu__item_active')
+                    link.classList.add('menu__link_active')
                 } else { 
-                    link.classList.remove('menu__item_active')
+                    link.classList.remove('menu__link_active')
                 }
             })
         }
